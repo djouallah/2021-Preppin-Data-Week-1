@@ -1,0 +1,6 @@
+config {
+  schema: "preppindata",
+  type: "view",
+}
+
+select * from  ${ref("Source_Materialized")} where Order_ID >10
