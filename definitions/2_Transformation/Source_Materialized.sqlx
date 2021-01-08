@@ -4,4 +4,4 @@ config {
   tags: ["Reporting Table"]
 }
 
-select * from  ${ref("Source")}
+select * from  `test-187010.preppindata.Source`
