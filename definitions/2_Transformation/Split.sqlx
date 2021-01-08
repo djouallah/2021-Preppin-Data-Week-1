@@ -5,7 +5,7 @@ config {
 
 
 SELECT
-  *,
+  *except(Store___Bike),
   SPLIT(Store___Bike, '-') [OFFSET(0)] Store,
   SPLIT(Store___Bike, '-') [OFFSET(1)] Bike
 from
