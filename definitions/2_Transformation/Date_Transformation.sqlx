@@ -1,0 +1,19 @@
+config {
+  schema: "preppindata",
+  type: "view",
+}
+
+SELECT
+  *,
+  EXTRACT(
+    DAY
+    FROM
+      Date
+  ) as DayoftheMonth,
+  EXTRACT(
+    QUARTER
+    FROM
+      Date
+  ) as QUARTER
+from
+  ${ref("filter")}
