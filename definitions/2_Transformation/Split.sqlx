@@ -1,0 +1,12 @@
+config {
+  schema: "preppindata",
+  type: "view",
+}
+
+
+SELECT
+  *,
+  SPLIT(Store___Bike, '-') [OFFSET(0)] Store,
+  SPLIT(Store___Bike, '-') [OFFSET(1)] Bike
+from
+  ${ref("Date_Transformation")}
