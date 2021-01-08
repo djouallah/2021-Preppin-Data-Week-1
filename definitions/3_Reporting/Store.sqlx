@@ -1,0 +1,11 @@
+config {
+  schema: "preppindata",
+  type: "view",
+}
+
+SELECT
+  *
+except(Date),
+  
+from
+  ${ref("Clean_Bike")}
