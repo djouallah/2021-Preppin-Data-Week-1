@@ -1,0 +1,6 @@
+config {
+  type: "declaration",
+  schema: "preppindata",
+  name: "PD2021Wk1Input",
+  description: "Link To Google Sheet"
+}
