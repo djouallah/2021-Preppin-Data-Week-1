@@ -1,0 +1,16 @@
+config {
+  schema: "preppindata",
+  type: "view",
+}
+
+SELECT
+  *
+except(bike),
+  CASE
+    WHEN STARTS_WITH(Bike, "R") THEN "Road"
+    WHEN STARTS_WITH(Bike, "G") THEN "Gravel"
+    WHEN STARTS_WITH(Bike, "M") THEN "Mountain"
+    Else Bike
+  END as Bike
+from
+  ${ref("Split")}
